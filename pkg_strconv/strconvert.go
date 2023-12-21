@@ -26,7 +26,6 @@ func main() {
 	fmt.Println(bin)
 
 	strInt := strconv.Itoa(999)
-
 	fmt.Println(strInt)
 
 }
