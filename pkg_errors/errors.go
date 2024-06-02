@@ -10,21 +10,19 @@ var (
 	NotFoundErr   = errors.New("not found error")
 )
 
-func GetById(id string) (string, error) {
+func GetById(id string) error {
 	if id == "" {
-		return id, ValidationErr
+		return ValidationErr
 	}
-	if id != "rin" {
-		return id, NotFoundErr
+	if id != "eko" {
+		return NotFoundErr
 	}
 
-	return id, nil
+	return nil
 }
 
 func main() {
-	id, err := GetById("ri")
-
-	fmt.Println(id)
+	err := GetById("budi")
 
 	if err != nil {
 		if errors.Is(err, ValidationErr) {
